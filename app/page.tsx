@@ -1,17 +1,53 @@
-import { BUSINESS } from "@/lib/config";
+import type { Metadata } from "next";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Marquee } from "@/components/layout/Marquee";
+import { Hero } from "@/components/home/Hero";
+import { MissionBlock } from "@/components/home/MissionBlock";
+import { ProgramsList } from "@/components/home/ProgramsList";
+import { CoachesPreview } from "@/components/home/CoachesPreview";
+import { StatsBar } from "@/components/home/StatsBar";
+import { FirstVisit } from "@/components/home/FirstVisit";
+import { LocationBlock } from "@/components/home/LocationBlock";
+import { FinalCTA } from "@/components/home/FinalCTA";
+import { BUSINESS, SITE_URL } from "@/lib/config";
+import { JsonLd } from "@/components/shared/JsonLd";
+
+export const metadata: Metadata = {
+  title: `${BUSINESS.name} — Portland's Youth-First Boxing Gym`,
+  description: `${BUSINESS.mission} Located at ${BUSINESS.address.street}, Portland OR. Call or text ${BUSINESS.phone.display}. Book a free trial today.`,
+  openGraph: {
+    title: `${BUSINESS.name} — Portland's Youth-First Boxing Gym`,
+    description: BUSINESS.mission,
+    url: SITE_URL,
+  },
+};
+
+const TICKER_ITEMS = [
+  "Free Trial Available",
+  "Walk-Ins Welcome",
+  BUSINESS.address.streetDisplay,
+  BUSINESS.phone.display,
+  BUSINESS.hours.display,
+];
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-3xl">
-        <p className="stamp text-blood">PHASE 1 SCAFFOLD</p>
-        <h1 className="font-display text-[clamp(4rem,12vw,10rem)] leading-[0.85] mt-4">
-          {BUSINESS.name.toUpperCase()}
-        </h1>
-        <p className="font-body text-base mt-6 max-w-prose text-bone/70">
-          Foundation only. Home page replaces this in Phase 3.
-        </p>
-      </div>
-    </main>
+    <>
+      <Marquee items={TICKER_ITEMS} />
+      <Header />
+      <JsonLd />
+      <main>
+        <Hero />
+        <MissionBlock />
+        <ProgramsList />
+        <CoachesPreview />
+        <StatsBar />
+        <FirstVisit />
+        <LocationBlock />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </>
   );
 }

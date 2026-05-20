@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Instrument_Serif, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { BUSINESS, SITE_URL } from "@/lib/config";
+import { GrainOverlay } from "@/components/shared/GrainOverlay";
 import "./globals.css";
 
 const display = Anton({
@@ -58,7 +59,7 @@ export default function RootLayout({
       className={`${display.variable} ${editorial.variable} ${body.variable}`}
     >
       <body>
-        <div className="grain" aria-hidden />
+        <GrainOverlay />
         {children}
         <Analytics />
       </body>

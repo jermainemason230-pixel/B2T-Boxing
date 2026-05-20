@@ -6,7 +6,7 @@ type ContactPayload = {
   phone: string;
   contactMethod: "call" | "text" | "email";
   experience: "none" | "some" | "experienced";
-  message: string;
+  message?: string;
 };
 
 const FROM_ADDRESS = "B2T Boxing <onboarding@resend.dev>";
@@ -32,7 +32,7 @@ export async function sendContactEmail(payload: ContactPayload) {
     `Experience: ${payload.experience}`,
     "",
     "Message:",
-    payload.message || "(none)",
+    payload.message ?? "(none)",
   ].join("\n");
 
   return resend.emails.send({
