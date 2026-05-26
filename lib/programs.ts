@@ -33,6 +33,7 @@ export const PROGRAMS: Program[] = [
     slug: "fundamentals",
     number: "02",
     name: "Fundamentals",
+    image: "/images/gym/golden-gloves-2019.jpg",
     shortDescription: "Stance, footwork, the six punches.",
     longDescription:
       "Where every fighter starts. Stance, footwork, defense, and the six core punches. Built for athletes who want the craft, not just the workout.",

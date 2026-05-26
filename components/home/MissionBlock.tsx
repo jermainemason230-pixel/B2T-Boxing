@@ -28,12 +28,15 @@ export function MissionBlock() {
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
-              src="/images/gym/gym-culture.jpg"
-              alt="B2T Boxing coaches with championship belts"
+              src="/images/gym/golden-gloves-2019.jpg"
+              alt="B2T Boxing team at Oregon Golden Gloves 2019"
               fill
               className="object-cover object-top"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
+            <span className="absolute bottom-4 left-4 stamp text-bone/80 bg-ink/60 px-2 py-1">
+              Oregon Golden Gloves 2019
+            </span>
           </div>
         </div>
       </div>
