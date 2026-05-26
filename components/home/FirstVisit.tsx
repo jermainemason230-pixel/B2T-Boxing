@@ -6,7 +6,7 @@ const BRING = [
   "An open mind",
 ];
 
-const PROVIDED = [
+const AT_GYM = [
   "Gloves",
   "Hand wraps",
 ];
@@ -31,14 +31,15 @@ export function FirstVisit() {
           {/* left — editorial paragraph */}
           <div className="space-y-6">
             <p className="font-body text-ink/80 text-lg leading-relaxed max-w-prose">
-              No experience needed. Walk in wearing athletic clothes. We&apos;ll
-              handle the rest — gloves and hand wraps are on us for your first
-              session.
+              No experience needed. Walk-ins are always welcome. No appointment
+              required. Just show up in athletic clothes and we&apos;ll take it
+              from there. Gloves and hand wraps are available for purchase at
+              the gym.
             </p>
             <p className="font-body text-ink/80 text-lg leading-relaxed max-w-prose">
-              Sparring is available for those who want it. All levels work at
-              the gym — from first-timers to amateur competitors. No one is
-              going to make you feel out of place.
+              Sparring is available for those who want it. All levels train
+              here. First-timers to amateur competitors. No one is going
+              to make you feel out of place.
             </p>
           </div>
 
@@ -60,9 +61,9 @@ export function FirstVisit() {
             </div>
 
             <div className="border-t border-ink/20 pt-10">
-              <p className="stamp text-ink/40 mb-4">We provide</p>
+              <p className="stamp text-ink/40 mb-4">Available for purchase</p>
               <ul className="space-y-3">
-                {PROVIDED.map((item) => (
+                {AT_GYM.map((item) => (
                   <li
                     key={item}
                     className="font-display uppercase text-2xl md:text-3xl flex items-start gap-4"

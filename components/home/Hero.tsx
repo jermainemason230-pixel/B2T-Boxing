@@ -32,14 +32,14 @@ export function Hero() {
               <span className="text-blood">THE</span> RING.
             </h1>
             <p className="stamp mt-6 text-bone/60 max-w-md">
-              Portland&apos;s youth-first boxing gym&nbsp;&nbsp;—&nbsp;&nbsp;Est. on E. Burnside
+              Portland&apos;s boxing gym&nbsp;&nbsp;·&nbsp;&nbsp;Est. on E. Burnside
             </p>
           </div>
 
           {/* CTA row */}
           <div className="mt-12 lg:mt-0 flex flex-col sm:flex-row sm:items-center gap-6">
             <Button href="/contact" className="self-start">
-              Book a Free Trial
+              Walk In
             </Button>
             <div className="flex items-center gap-6 font-display uppercase tracking-wider text-sm">
               <PhoneCTA variant="compact" />

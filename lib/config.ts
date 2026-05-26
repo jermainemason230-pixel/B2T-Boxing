@@ -1,8 +1,8 @@
 export const BUSINESS = {
   name: "B2T Boxing",
-  tagline: "Portland's youth-first boxing gym.",
+  tagline: "Portland's boxing gym.",
   mission:
-    "To help youth athletes with gear sponsorship, travel, and upcoming fights.",
+    "To build better boxers. First-timers to competitive fighters.",
   phone: {
     raw: "9719003973",
     href: "971-900-3973",
@@ -48,7 +48,6 @@ export const STRIPE_PAYMENT_LINK =
 export const NAV_LINKS = [
   { href: "/programs", label: "Programs" },
   { href: "/coaches", label: "Coaches" },
-  { href: "/schedule", label: "Schedule" },
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ] as const;

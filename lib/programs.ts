@@ -52,7 +52,7 @@ export const PROGRAMS: Program[] = [
     name: "Sparring",
     shortDescription: "Supervised live training.",
     longDescription:
-      "Supervised live training for athletes ready to test what they've learned. Controlled rounds with a coach in the corner. Sparring at B2T is intentional, not casual — you earn your way in.",
+      "Supervised live training for athletes ready to test what they've learned. Controlled rounds with a coach in the corner. Sparring at B2T is intentional, not casual. You earn your way in.",
     forWho: [
       "Athletes who have completed Fundamentals",
       "Members preparing for competition",
@@ -88,9 +88,9 @@ export const PROGRAMS: Program[] = [
     name: "Kids / Teens",
     shortDescription: "Discipline. Focus. Athleticism.",
     longDescription:
-      "Age-appropriate instruction. Discipline, focus, and athleticism — without the contact unless and until the athlete and parent want it. B2T's mission lives here.",
+      "Age-appropriate instruction. Discipline, focus, and athleticism. No contact unless the athlete and parent want it. B2T's mission lives here.",
     forWho: [
-      "Kids and teens ages 7–17",
+      "Kids and teens",
       "Families looking for a serious athletic environment",
       "Young athletes interested in eventual competition",
     ],

@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/coaches", priority: 0.8, changeFreq: "monthly" },
     { path: "/pricing", priority: 0.8, changeFreq: "monthly" },
     { path: "/contact", priority: 0.9, changeFreq: "monthly" },
-    { path: "/schedule", priority: 0.7, changeFreq: "weekly" },
     { path: "/waiver", priority: 0.5, changeFreq: "yearly" },
     { path: "/pay", priority: 0.6, changeFreq: "yearly" },
   ] as const;

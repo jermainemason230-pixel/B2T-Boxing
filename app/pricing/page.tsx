@@ -105,7 +105,7 @@ export default function PricingPage() {
                 <Stamp className="text-ink/50">Cancellation policy</Stamp>
                 <p className="font-body text-ink/70 mt-3 text-base leading-relaxed">
                   A 30-day written notice is required to cancel membership.
-                  Membership is month-to-month — no long-term contracts.
+                  Membership is month-to-month. No long-term contracts.
                 </p>
               </div>
             </div>
@@ -128,7 +128,7 @@ export default function PricingPage() {
                   Start with a free trial
                 </Button>
                 <p className="stamp text-ink/50">
-                  Or walk in at {BUSINESS.address.streetDisplay} — {BUSINESS.hours.display}
+                  Or walk in at {BUSINESS.address.streetDisplay}, {BUSINESS.hours.display}
                 </p>
               </div>
 

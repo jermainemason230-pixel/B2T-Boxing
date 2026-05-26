@@ -20,7 +20,7 @@ export function Footer() {
             href="/contact"
             className="stamp text-bone hover:text-blood transition-colors self-start md:self-end"
           >
-            Book a free trial →
+            Walk in anytime →
           </Link>
         </div>
 

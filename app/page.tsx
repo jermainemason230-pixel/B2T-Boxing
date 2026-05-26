@@ -14,18 +14,18 @@ import { BUSINESS, SITE_URL } from "@/lib/config";
 import { JsonLd } from "@/components/shared/JsonLd";
 
 export const metadata: Metadata = {
-  title: `${BUSINESS.name} — Portland's Youth-First Boxing Gym`,
-  description: `${BUSINESS.mission} Located at ${BUSINESS.address.street}, Portland OR. Call or text ${BUSINESS.phone.display}. Book a free trial today.`,
+  title: `${BUSINESS.name} — Portland's Boxing Gym`,
+  description: `${BUSINESS.mission} Located at ${BUSINESS.address.street}, Portland OR. Call or text ${BUSINESS.phone.display}. Walk-ins always welcome.`,
   openGraph: {
-    title: `${BUSINESS.name} — Portland's Youth-First Boxing Gym`,
+    title: `${BUSINESS.name} — Portland's Boxing Gym`,
     description: BUSINESS.mission,
     url: SITE_URL,
   },
 };
 
 const TICKER_ITEMS = [
-  "Free Trial Available",
-  "Walk-Ins Welcome",
+  "Walk-Ins Always Welcome",
+  "All Levels Welcome",
   BUSINESS.address.streetDisplay,
   BUSINESS.phone.display,
   BUSINESS.hours.display,

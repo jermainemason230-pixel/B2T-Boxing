@@ -41,7 +41,7 @@ export default function ProgramsPage() {
             </DisplayHeading>
             <p className="font-body text-bone/60 text-lg mt-8 max-w-xl leading-relaxed">
               Five programs. Every level. From your first session to your next
-              sanctioned bout — there&apos;s a place for you at B2T.
+              sanctioned bout. There&apos;s a place for you at B2T.
             </p>
           </div>
         </section>

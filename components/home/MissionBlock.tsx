@@ -20,8 +20,8 @@ export function MissionBlock() {
           <div className="mt-10 h-1 w-24 bg-blood" />
         </div>
         <p className="mt-10 font-body text-ink/70 text-base md:text-lg max-w-xl leading-relaxed">
-          B2T Boxing is Portland&apos;s home for serious boxing instruction —
-          from first-timers to competitive fighters. Our coaches have been in
+          B2T Boxing is Portland&apos;s home for serious boxing instruction.
+          First-timers to competitive fighters. Our coaches have been in
           the ring. They know what it takes.
         </p>
       </div>

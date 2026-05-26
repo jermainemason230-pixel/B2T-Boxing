@@ -9,7 +9,7 @@ export function FinalCTA() {
         </h2>
         <div className="flex-shrink-0">
           <Button href="/contact" variant="invert" className="border-bone">
-            Book a Free Trial
+            Walk In
           </Button>
         </div>
       </div>

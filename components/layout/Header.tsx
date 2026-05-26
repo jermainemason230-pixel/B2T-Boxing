@@ -57,7 +57,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <Button href="/contact" className="hidden md:inline-flex">
-            Book Free Trial
+            Walk In
           </Button>
           <button
             type="button"
@@ -90,7 +90,7 @@ export function Header() {
                 className="w-full"
                 onClick={() => setOpen(false)}
               >
-                Book Free Trial
+                Walk In
               </Button>
             </div>
           </nav>

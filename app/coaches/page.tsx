@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 const TICKER_ITEMS = [
-  "Bryan Sanchez — 45-5 Amateur",
+  "Bryan Sanchez · 45-5 Amateur",
   "3× Golden Gloves Champion",
   "3-0 Professional",
   "Portland, OR",
