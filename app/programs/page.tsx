@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Marquee } from "@/components/layout/Marquee";
@@ -80,11 +81,23 @@ export default function ProgramsPage() {
 
                 <div className="grid md:grid-cols-12 gap-12 lg:gap-20">
                   <div className="md:col-span-4">
-                    <Placeholder
-                      aspect="4/5"
-                      label={`${program.name} photo`}
-                      alt={`${program.name} at B2T Boxing`}
-                    />
+                    {program.image ? (
+                      <div className="relative aspect-[4/5] w-full overflow-hidden">
+                        <Image
+                          src={program.image}
+                          alt={`${program.name} at B2T Boxing`}
+                          fill
+                          className="object-cover object-center"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
+                      </div>
+                    ) : (
+                      <Placeholder
+                        aspect="4/5"
+                        label={`${program.name} photo`}
+                        alt={`${program.name} at B2T Boxing`}
+                      />
+                    )}
                   </div>
 
                   <div className="md:col-span-8 space-y-12">

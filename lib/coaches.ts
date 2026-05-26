@@ -3,7 +3,7 @@ export type Coach = {
   name: string;
   credentials: string[];
   bio: string;
-  imageSlot: string;
+  imageSlot?: string;
 };
 
 export const COACHES: Coach[] = [
@@ -30,6 +30,5 @@ export const COACHES: Coach[] = [
     name: "Oliver Gradzadi",
     credentials: [],
     bio: "",
-    imageSlot: "/images/coaches/oliver-gradzadi.jpg",
   },
 ];

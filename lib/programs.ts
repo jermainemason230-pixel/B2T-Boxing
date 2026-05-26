@@ -6,6 +6,7 @@ export type Program = {
   longDescription: string;
   forWho: string[];
   whatYouLearn: string[];
+  image?: string;
 };
 
 export const PROGRAMS: Program[] = [
@@ -13,6 +14,7 @@ export const PROGRAMS: Program[] = [
     slug: "fitness-boxing",
     number: "01",
     name: "Fitness Boxing",
+    image: "/images/gym/gym-day.jpg",
     shortDescription: "Conditioning. Power. Confidence.",
     longDescription:
       "Boxing-style conditioning that builds power, endurance, and confidence. No contact required. The same drills our competitive fighters run, scaled to wherever you are today.",
@@ -50,6 +52,7 @@ export const PROGRAMS: Program[] = [
     slug: "sparring",
     number: "03",
     name: "Sparring",
+    image: "/images/gym/gym-culture.jpg",
     shortDescription: "Supervised live training.",
     longDescription:
       "Supervised live training for athletes ready to test what they've learned. Controlled rounds with a coach in the corner. Sparring at B2T is intentional, not casual. You earn your way in.",
@@ -68,6 +71,7 @@ export const PROGRAMS: Program[] = [
     slug: "fight-team",
     number: "04",
     name: "Fight Team",
+    image: "/images/programs/competition.jpg",
     shortDescription: "Competition prep, amateur and pro.",
     longDescription:
       "Competitive training for amateur and pro athletes preparing for sanctioned bouts. Roadwork, sparring, strategy, and corner support through fight night.",
@@ -86,6 +90,7 @@ export const PROGRAMS: Program[] = [
     slug: "kids-teens",
     number: "05",
     name: "Kids / Teens",
+    image: "/images/programs/kids-teens.jpg",
     shortDescription: "Discipline. Focus. Athleticism.",
     longDescription:
       "Age-appropriate instruction. Discipline, focus, and athleticism. No contact unless the athlete and parent want it. B2T's mission lives here.",

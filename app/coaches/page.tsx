@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Marquee } from "@/components/layout/Marquee";
@@ -65,12 +66,24 @@ export default function CoachesPage() {
                       !photoLeft && "md:order-last",
                     )}
                   >
-                    <Placeholder
-                      aspect="4/5"
-                      caption={coach.name}
-                      label="Coach photo — 4:5 portrait"
-                      alt={`${coach.name} — B2T Boxing`}
-                    />
+                    {coach.imageSlot ? (
+                      <div className="relative aspect-[4/5] w-full overflow-hidden">
+                        <Image
+                          src={coach.imageSlot}
+                          alt={`${coach.name} — B2T Boxing`}
+                          fill
+                          className="object-cover object-top"
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                        />
+                      </div>
+                    ) : (
+                      <Placeholder
+                        aspect="4/5"
+                        caption={coach.name}
+                        label="Coach photo — 4:5 portrait"
+                        alt={`${coach.name} — B2T Boxing`}
+                      />
+                    )}
                   </div>
 
                   {/* bio */}

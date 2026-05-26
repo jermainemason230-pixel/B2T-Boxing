@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SectionLabel } from "@/components/type/SectionLabel";
 import { DisplayHeading } from "@/components/type/DisplayHeading";
 import { Placeholder } from "@/components/shared/Placeholder";
@@ -24,12 +25,24 @@ export function CoachesPreview() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-ink/20">
           {COACHES.map((coach) => (
             <div key={coach.slug} className="border-b md:border-b-0 md:border-r border-ink/20 last:border-0 pb-10 md:pb-0 md:pr-10 md:last:pr-0 md:pl-0 md:[&:not(:first-child)]:pl-10 pt-10">
-              <Placeholder
-                aspect="3/4"
-                caption={coach.name}
-                label="Coach photo — 3:4 portrait"
-                alt={`${coach.name} — B2T Boxing coach`}
-              />
+              {coach.imageSlot ? (
+                <div className="relative aspect-[3/4] w-full overflow-hidden">
+                  <Image
+                    src={coach.imageSlot}
+                    alt={`${coach.name} — B2T Boxing coach`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+              ) : (
+                <Placeholder
+                  aspect="3/4"
+                  caption={coach.name}
+                  label="Coach photo — 3:4 portrait"
+                  alt={`${coach.name} — B2T Boxing coach`}
+                />
+              )}
               <h3 className="font-display uppercase text-[clamp(1.75rem,3vw,2.5rem)] leading-tight mt-6 text-ink">
                 {coach.name}
               </h3>

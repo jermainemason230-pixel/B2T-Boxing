@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionLabel } from "@/components/type/SectionLabel";
 import { DisplayHeading } from "@/components/type/DisplayHeading";
 
@@ -26,6 +27,16 @@ export function FirstVisit() {
         >
           What to bring.
         </DisplayHeading>
+
+        <div className="mt-12 relative aspect-[16/7] w-full overflow-hidden">
+          <Image
+            src="/images/gym/gym-day.jpg"
+            alt="Inside B2T Boxing gym"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+        </div>
 
         <div className="mt-16 grid md:grid-cols-2 gap-16 md:gap-24">
           {/* left — editorial paragraph */}

@@ -2,10 +2,10 @@
 
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { PhoneCTA } from "@/components/shared/PhoneCTA";
-import { Placeholder } from "@/components/shared/Placeholder";
 import { BUSINESS } from "@/lib/config";
 
 export function Hero() {
@@ -21,6 +21,16 @@ export function Hero() {
       className="relative min-h-screen bg-ink flex flex-col justify-between pt-8 pb-10 px-5 md:px-10 overflow-hidden"
       aria-label="Hero"
     >
+      {/* background gym photo */}
+      <Image
+        src="/images/gym/gym-night.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover opacity-20 pointer-events-none select-none"
+        sizes="100vw"
+        aria-hidden
+      />
       {/* main content row */}
       <div className="flex-1 flex flex-col lg:flex-row lg:items-stretch gap-8 lg:gap-0 mt-4 lg:mt-8">
 
@@ -56,12 +66,14 @@ export function Hero() {
         </div>
 
         {/* photo block — right column, bleeds top on large screens */}
-        <div className="w-full lg:w-[38%] lg:self-stretch lg:-mt-8 lg:-mb-10 lg:ml-10 flex-shrink-0">
-          <Placeholder
-            aspect="4/5"
-            label="Fighter photo — 4:5 portrait"
-            alt="B2T Boxing fighter in action"
-            className="h-full max-h-[70vh] lg:max-h-none"
+        <div className="w-full lg:w-[38%] lg:self-stretch lg:-mt-8 lg:-mb-10 lg:ml-10 flex-shrink-0 relative overflow-hidden max-h-[70vh] lg:max-h-none aspect-[4/5] lg:aspect-auto">
+          <Image
+            src="/images/coaches/bryan-sanchez.jpg"
+            alt="Bryan Sanchez — B2T Boxing head coach"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="(max-width: 1024px) 100vw, 38vw"
           />
         </div>
       </div>
