@@ -9,13 +9,13 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { BUSINESS } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Book a Free Trial",
-  description: `Book a free trial or ask a question. B2T Boxing in Portland, OR. Call or text ${BUSINESS.phone.display}, or fill out the form and we'll get back to you.`,
+  title: "Get Started",
+  description: `Walk in or reach out. B2T Boxing in Portland, OR. Call or text ${BUSINESS.phone.display}, or fill out the form and we'll get back to you.`,
 };
 
 const TICKER_ITEMS = [
-  "Free Trial Available",
-  "Walk-Ins Welcome",
+  "Walk-Ins Always Welcome",
+  "No Appointment Needed",
   BUSINESS.address.streetDisplay,
   BUSINESS.phone.display,
   BUSINESS.hours.display,
@@ -31,7 +31,7 @@ export default function ContactPage() {
           <div className="max-w-[1600px] mx-auto">
             <SectionLabel number="10" label="Contact" />
             <h1 className="font-display uppercase text-[clamp(3.5rem,9vw,10rem)] leading-[0.85] mt-6">
-              Book a<br />free trial.
+              Get<br />started.
             </h1>
           </div>
         </section>
