@@ -4,14 +4,13 @@ const STATS = [
   { value: "03", label: "Head\nCoaches" },
   { value: "05", label: "Training\nPrograms" },
   { value: "45–5", label: "Bryan's amateur\nrecord" },
-  { value: "30", label: "Day cancellation\nnotice" },
 ];
 
 export function StatsBar() {
   return (
     <section className="bg-ash border-y border-smoke px-5 md:px-10 py-16 md:py-20">
       <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-smoke">
+        <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-smoke">
           {STATS.map((stat) => (
             <div
               key={stat.value}
