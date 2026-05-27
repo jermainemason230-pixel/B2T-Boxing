@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Marquee } from "@/components/layout/Marquee";
 import { Hero } from "@/components/home/Hero";
 import { MissionBlock } from "@/components/home/MissionBlock";
+import { VideoReel } from "@/components/home/VideoReel";
 import { ProgramsList } from "@/components/home/ProgramsList";
 import { CoachesPreview } from "@/components/home/CoachesPreview";
 import { StatsBar } from "@/components/home/StatsBar";
@@ -40,6 +41,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <MissionBlock />
+        <VideoReel />
         <ProgramsList />
         <CoachesPreview />
         <StatsBar />

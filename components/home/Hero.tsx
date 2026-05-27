@@ -21,16 +21,17 @@ export function Hero() {
       className="relative min-h-screen bg-ink flex flex-col justify-between pt-8 pb-10 px-5 md:px-10 overflow-hidden"
       aria-label="Hero"
     >
-      {/* background gym photo */}
-      <Image
-        src="/images/gym/gym-night.jpg"
-        alt=""
-        fill
-        priority
-        className="object-cover opacity-20 pointer-events-none select-none"
-        sizes="100vw"
-        aria-hidden
-      />
+      {/* background video loop */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none"
+        aria-hidden={true}
+      >
+        <source src="/videos/adults/mens-class-clip.mp4" type="video/mp4" />
+      </video>
       {/* main content row */}
       <div className="flex-1 flex flex-col lg:flex-row lg:items-stretch gap-8 lg:gap-0 mt-4 lg:mt-8">
 
