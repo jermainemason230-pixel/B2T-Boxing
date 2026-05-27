@@ -15,7 +15,7 @@ export const COACHES: Coach[] = [
       "3–0 PROFESSIONAL",
       "3× GOLDEN GLOVES CHAMPION",
     ],
-    bio: "Bryan founded B2T with one goal: build the gym he wished he'd had as a kid. Three-time Golden Gloves champion, undefeated as a professional, and the head voice in every corner at B2T.",
+    bio: "Bryan founded B2T. Three-time Golden Gloves champion, undefeated as a professional, and the head voice in every corner at B2T.",
     imageSlot: "/images/coaches/bryan-sanchez.jpg",
   },
   {
