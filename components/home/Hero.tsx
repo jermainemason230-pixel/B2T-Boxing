@@ -49,8 +49,8 @@ export function Hero() {
 
           {/* CTA row */}
           <div className="mt-12 lg:mt-0 flex flex-col sm:flex-row sm:items-center gap-6">
-            <Button href="/contact" className="self-start">
-              Get Started
+            <Button href="/pay" className="self-start">
+              Join Now
             </Button>
             <div className="flex items-center gap-6 font-display uppercase tracking-wider text-sm">
               <PhoneCTA variant="compact" />

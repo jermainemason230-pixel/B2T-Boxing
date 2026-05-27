@@ -7,7 +7,7 @@ import { SectionLabel } from "@/components/type/SectionLabel";
 import { DisplayHeading } from "@/components/type/DisplayHeading";
 import { Button } from "@/components/ui/Button";
 import { Stamp } from "@/components/type/Stamp";
-import { BUSINESS } from "@/lib/config";
+import { BUSINESS, STRIPE_SIGNUP_LINK } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -18,7 +18,7 @@ const TICKER_ITEMS = [
   "$150 / Month",
   "$100 Enrollment Fee",
   "30-Day Cancellation",
-  "Walk In to Enroll",
+  "Sign Up Online",
   BUSINESS.address.streetDisplay,
 ];
 
@@ -116,16 +116,15 @@ export default function PricingPage() {
                   Ready to start?
                 </h2>
                 <p className="font-body text-ink/70 mt-4 text-lg leading-relaxed">
-                  New signups happen in person at the gym. Come in during
-                  business hours and we&apos;ll get you set up.
+                  Sign up online or walk in during open hours. No appointment needed.
                 </p>
               </div>
               <div className="flex flex-col gap-4">
                 <Button
-                  href="/contact"
+                  href={STRIPE_SIGNUP_LINK || "/pay"}
                   className="bg-blood border-blood text-bone hover:bg-ink hover:border-ink self-start"
                 >
-                  Start with a free trial
+                  Sign Up Online
                 </Button>
                 <p className="stamp text-ink/50">
                   Or walk in at {BUSINESS.address.streetDisplay}, {BUSINESS.hours.display}

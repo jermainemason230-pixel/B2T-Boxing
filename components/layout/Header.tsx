@@ -56,7 +56,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button href="/contact" className="hidden md:inline-flex">
+          <Button href="/pay" className="hidden md:inline-flex">
             Get Started
           </Button>
           <button
@@ -86,7 +86,7 @@ export function Header() {
             ))}
             <div className="pt-8">
               <Button
-                href="/contact"
+                href="/pay"
                 className="w-full"
                 onClick={() => setOpen(false)}
               >

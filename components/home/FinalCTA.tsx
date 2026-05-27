@@ -8,8 +8,8 @@ export function FinalCTA() {
           Walk in. Suit up. Step in the ring.
         </h2>
         <div className="flex-shrink-0">
-          <Button href="/contact" variant="invert" className="border-bone">
-            Walk In
+          <Button href="/pay" variant="invert" className="border-bone">
+            Join Now
           </Button>
         </div>
       </div>

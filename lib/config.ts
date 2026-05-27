@@ -45,6 +45,9 @@ export const SITE_URL =
 export const STRIPE_PAYMENT_LINK =
   process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ?? "";
 
+export const STRIPE_SIGNUP_LINK =
+  process.env.NEXT_PUBLIC_STRIPE_SIGNUP_LINK ?? "";
+
 export const DONATE_LINK =
   process.env.NEXT_PUBLIC_DONATE_LINK ?? "";
 
