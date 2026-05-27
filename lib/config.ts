@@ -45,9 +45,13 @@ export const SITE_URL =
 export const STRIPE_PAYMENT_LINK =
   process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ?? "";
 
+export const DONATE_LINK =
+  process.env.NEXT_PUBLIC_DONATE_LINK ?? "";
+
 export const NAV_LINKS = [
   { href: "/programs", label: "Programs" },
   { href: "/coaches", label: "Coaches" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/pay", label: "Pay" },
   { href: "/contact", label: "Contact" },
 ] as const;

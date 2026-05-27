@@ -101,14 +101,9 @@ export default function CoachesPage() {
                       </div>
                     )}
 
-                    {coach.bio ? (
+                    {coach.bio && (
                       <p className="font-body text-lg text-bone/80 leading-relaxed mt-8 max-w-prose">
                         {coach.bio}
-                      </p>
-                    ) : (
-                      <p className="font-body text-lg text-bone/30 leading-relaxed mt-8 italic">
-                        {/* [OWNER: add bio here in lib/coaches.ts] */}
-                        Bio coming soon.
                       </p>
                     )}
                   </div>
