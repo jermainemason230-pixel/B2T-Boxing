@@ -43,10 +43,10 @@ export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const STRIPE_PAYMENT_LINK =
-  process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ?? "https://buy.stripe.com/cNi3cu61ngwX5HX6eseUU02";
+  process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ?? "https://buy.stripe.com/9B614m4XjbcDfixauIeUU03";
 
 export const STRIPE_SIGNUP_LINK =
-  process.env.NEXT_PUBLIC_STRIPE_SIGNUP_LINK ?? "https://buy.stripe.com/cNi3cu61ngwX5HX6eseUU02";
+  process.env.NEXT_PUBLIC_STRIPE_SIGNUP_LINK ?? "https://buy.stripe.com/9B614m4XjbcDfixauIeUU03";
 
 export const DONATE_LINK =
   process.env.NEXT_PUBLIC_DONATE_LINK ?? "";
