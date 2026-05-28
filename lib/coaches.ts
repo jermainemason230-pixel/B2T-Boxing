@@ -30,5 +30,6 @@ export const COACHES: Coach[] = [
     name: "Oliver Gradzadi",
     credentials: [],
     bio: "",
+    imageSlot: "/images/coaches/oliver-gradzadi.jpg",
   },
 ];
