@@ -3,20 +3,26 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Marquee } from "@/components/layout/Marquee";
 import { SectionLabel } from "@/components/type/SectionLabel";
-import { DisplayHeading } from "@/components/type/DisplayHeading";
-import { Button } from "@/components/ui/Button";
+import { WaiverForm } from "@/components/forms/WaiverForm";
 import { BUSINESS } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Waiver",
-  description: `A liability waiver is required before your first session at B2T Boxing Portland. Download it here or sign in person at the gym.`,
+  description: `Sign the B2T Boxing liability waiver online before your first session. Portland, OR.`,
 };
 
 const TICKER_ITEMS = [
   "Waiver Required — First Session",
-  "Sign in Person or Download",
+  "Sign Online",
   BUSINESS.address.streetDisplay,
   BUSINESS.hours.display,
+];
+
+const WAIVER_TEXT = [
+  "I/We hereby understand and acknowledge that the training, programs and events held by B2T BOXING may expose me to many inherent risks, including accidents, injury, illness or even death. I/We assume all risk of injuries associated with participation including, but not limited to falls, contact with other participants, the effects of the weather, including high heat and/or humidity, and all other such risks being known and appreciated by me.",
+  "We hereby acknowledge my responsibility in communicating any physical and psychological concerns that might conflict with participation in activity. I/We acknowledge that I am physically fit and mentally capable of performing the physical activity I choose to participate in.",
+  "After having read this waiver and knowing these facts, and in consideration of acceptance of my participation and the B2T BOXING LLC. furnishing services to me, I agree, for myself and anyone entitled to act on my behalf, to HOLD HARMLESS, WAIVE AND RELEASE the B2T BOXING LLC its officers, agents, employees, organizers, representatives, and successors from any responsibility, liabilities, demands, or claims of any kind arising out of my participation in the B2T Boxing Gym training, programs and/or events.",
+  "By my signature I/We indicate that I/we have read and understand this Waiver of Liability. I am aware that this is a waiver and a release of liability and voluntarily agree to its terms.",
 ];
 
 export default function WaiverPage() {
@@ -25,50 +31,46 @@ export default function WaiverPage() {
       <Marquee items={TICKER_ITEMS} />
       <Header />
       <main>
-        <section className="bg-ink min-h-[80vh] flex items-center px-5 md:px-10 py-24">
-          <div className="max-w-[1600px] mx-auto w-full">
+        {/* page header */}
+        <section className="bg-ink px-5 md:px-10 pt-16 pb-24">
+          <div className="max-w-[1600px] mx-auto">
             <SectionLabel number="08" label="Waiver" />
-            <DisplayHeading
-              as="h1"
-              className="text-[clamp(3.5rem,9vw,10rem)] mt-6"
-            >
+            <h1 className="font-display uppercase text-[clamp(3.5rem,9vw,10rem)] leading-[0.85] mt-6">
               Sign the waiver.
-            </DisplayHeading>
+            </h1>
+            <p className="font-body text-bone/60 text-lg mt-8 max-w-xl leading-relaxed">
+              A liability waiver is required before your first training session.
+              Read the full waiver below and sign digitally — your submission goes
+              directly to the gym.
+            </p>
+          </div>
+        </section>
 
-            <div className="mt-12 border-t border-smoke pt-12 grid md:grid-cols-2 gap-12 max-w-4xl">
-              <div className="space-y-4">
-                <p className="font-body text-bone/70 text-lg leading-relaxed">
-                  A liability waiver is required before your first training
-                  session. You can download and print the form below, or sign
-                  it in person when you arrive.
+        {/* waiver text */}
+        <section className="bg-bone text-ink px-5 md:px-10 py-16 border-t border-smoke">
+          <div className="max-w-[1600px] mx-auto">
+            <h2 className="font-display uppercase text-3xl md:text-4xl mb-10 tracking-tight">
+              Waiver of Liability
+            </h2>
+            <div className="space-y-6 max-w-3xl">
+              {WAIVER_TEXT.map((para, i) => (
+                <p key={i} className="font-body text-ink/80 text-base leading-relaxed">
+                  {para}
                 </p>
-                <p className="font-body text-bone/70 text-lg leading-relaxed">
-                  Bring the signed form to the gym, or we&apos;ll have a copy
-                  waiting at the front desk.
-                </p>
-                <p className="stamp text-bone/40 mt-4">
-                  E-sign available in a future update.
-                </p>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              <div className="flex flex-col gap-6">
-                <Button
-                  href="/waiver.pdf"
-                  arrow={false}
-                  className="self-start"
-                >
-                  Download Waiver (PDF)
-                </Button>
-                <div className="border-t border-smoke pt-6">
-                  <p className="stamp text-bone/40">Questions?</p>
-                  <a
-                    href={`tel:${BUSINESS.phone.href}`}
-                    className="font-display uppercase text-2xl hover:text-blood transition-colors block mt-2"
-                  >
-                    {BUSINESS.phone.display}
-                  </a>
-                </div>
-              </div>
+        {/* signature form */}
+        <section className="bg-ash px-5 md:px-10 py-16 md:py-24 border-t border-smoke">
+          <div className="max-w-[1600px] mx-auto">
+            <h2 className="font-display uppercase text-3xl md:text-4xl mb-2 tracking-tight">
+              Sign below
+            </h2>
+            <p className="stamp text-bone/40 mb-10">All fields required unless noted</p>
+            <div className="max-w-3xl">
+              <WaiverForm />
             </div>
           </div>
         </section>
