@@ -26,53 +26,55 @@ export function Header() {
   }, [open]);
 
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-40 w-full transition-colors duration-300",
-        scrolled
-          ? "bg-ink/80 backdrop-blur border-b border-smoke"
-          : "bg-transparent border-b border-transparent",
-      )}
-    >
-      <div className="mx-auto flex h-16 md:h-20 max-w-[1600px] items-center justify-between px-5 md:px-10">
-        <Link
-          href="/"
-          className="font-display text-xl md:text-2xl uppercase tracking-tight leading-none"
-          aria-label={`${BUSINESS.name} — home`}
-        >
-          B2T<span className="text-blood">·</span>BOXING
-        </Link>
-
-        <nav className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="stamp text-bone/70 hover:text-bone transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <Button href="/pay" className="hidden md:inline-flex">
-            Get Started
-          </Button>
-          <button
-            type="button"
-            onClick={() => setOpen((o) => !o)}
-            className="lg:hidden p-2 text-bone"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
+    <>
+      <header
+        className={cn(
+          "sticky top-0 z-40 w-full transition-colors duration-300",
+          scrolled
+            ? "bg-ink/80 backdrop-blur border-b border-smoke"
+            : "bg-transparent border-b border-transparent",
+        )}
+      >
+        <div className="mx-auto flex h-16 md:h-20 max-w-[1600px] items-center justify-between px-5 md:px-10">
+          <Link
+            href="/"
+            className="font-display text-xl md:text-2xl uppercase tracking-tight leading-none"
+            aria-label={`${BUSINESS.name} — home`}
           >
-            {open ? <X className="size-6" /> : <Menu className="size-6" />}
-          </button>
+            B2T<span className="text-blood">·</span>BOXING
+          </Link>
+
+          <nav className="hidden lg:flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="stamp text-bone/70 hover:text-bone transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <Button href="/pay" className="hidden md:inline-flex">
+              Get Started
+            </Button>
+            <button
+              type="button"
+              onClick={() => setOpen((o) => !o)}
+              className="lg:hidden p-2 text-bone"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
+              {open ? <X className="size-6" /> : <Menu className="size-6" />}
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
       {open ? (
-        <div className="lg:hidden fixed inset-0 top-16 md:top-20 z-30 bg-ink border-t border-smoke">
+        <div className="lg:hidden fixed inset-0 top-16 md:top-20 z-50 bg-ink border-t border-smoke overflow-y-auto">
           <nav className="flex flex-col px-5 py-8 gap-1">
             {NAV_LINKS.map((link) => (
               <Link
@@ -96,6 +98,6 @@ export function Header() {
           </nav>
         </div>
       ) : null}
-    </header>
+    </>
   );
 }

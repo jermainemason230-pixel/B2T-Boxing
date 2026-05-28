@@ -14,7 +14,7 @@ export function StatsBar() {
           {STATS.map((stat) => (
             <div
               key={stat.value}
-              className="px-6 first:pl-0 last:pr-0 flex flex-col gap-3"
+              className="px-6 first:pl-0 last:pr-0 py-10 sm:py-0 flex flex-col gap-4"
             >
               <span className="font-display text-blood text-[clamp(3rem,7vw,7rem)] leading-[0.85]">
                 {stat.value}
