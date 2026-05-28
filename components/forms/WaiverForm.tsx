@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useState, useEffect, useActionState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { useFormState } from "react-dom";
 import { submitWaiver, type WaiverFormState } from "@/app/waiver/actions";
 import { Button } from "@/components/ui/Button";
 
@@ -160,7 +161,8 @@ function Field({
 const initialState: WaiverFormState = { status: "idle" };
 
 export function WaiverForm() {
-  const [state, action, pending] = useActionState(submitWaiver, initialState);
+  const [state, action] = useFormState(submitWaiver, initialState);
+  const [pending, setPending] = useState(false);
   const [signatureDataUrl, setSignatureDataUrl] = useState<string | null>(null);
   const [sigError, setSigError] = useState<string | undefined>();
 
@@ -177,6 +179,7 @@ export function WaiverForm() {
       return;
     }
     setSigError(undefined);
+    setPending(true);
     const form = e.currentTarget;
     const hiddenInput = form.querySelector<HTMLInputElement>('[name="signatureDataUrl"]');
     if (hiddenInput) hiddenInput.value = signatureDataUrl;
