@@ -51,10 +51,12 @@ export const STRIPE_SIGNUP_LINK =
 export const DONATE_LINK =
   process.env.NEXT_PUBLIC_DONATE_LINK ?? "";
 
+export const PRIVATE_LESSONS_LINK =
+  process.env.NEXT_PUBLIC_PRIVATE_LESSONS_LINK ?? "https://buy.stripe.com/bJe28q1L71C3gmBauIeUU04";
+
 export const NAV_LINKS = [
   { href: "/programs", label: "Programs" },
   { href: "/coaches", label: "Coaches" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/pay", label: "Pay" },
+  { href: "/pay", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ] as const;
