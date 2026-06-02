@@ -49,7 +49,7 @@ export const STRIPE_SIGNUP_LINK =
   process.env.NEXT_PUBLIC_STRIPE_SIGNUP_LINK ?? "https://buy.stripe.com/9B614m4XjbcDfixauIeUU03";
 
 export const DONATE_LINK =
-  process.env.NEXT_PUBLIC_DONATE_LINK ?? "";
+  process.env.NEXT_PUBLIC_DONATE_LINK ?? "https://buy.stripe.com/14A6oGcpL5Sjeet46keUU05";
 
 export const PRIVATE_LESSONS_LINK =
   process.env.NEXT_PUBLIC_PRIVATE_LESSONS_LINK ?? "https://buy.stripe.com/bJe28q1L71C3gmBauIeUU04";
