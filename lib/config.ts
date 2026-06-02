@@ -31,7 +31,7 @@ export const BUSINESS = {
     cancellationNoticeDays: 30,
   },
   social: {
-    instagram: "",
+    instagram: "https://www.instagram.com/b2tboxinggym?utm_source=qr",
     facebook: "",
   },
   legal: {
