@@ -26,10 +26,10 @@ export const COACHES: Coach[] = [
     imageSlot: "/images/coaches/jc-wade.jpg",
   },
   {
-    slug: "oliver-gradzadi",
-    name: "Oliver Gradzadi",
+    slug: "olivier-gandzadi",
+    name: "Olivier Gandzadi",
     credentials: [],
-    bio: "",
-    imageSlot: "/images/coaches/oliver-gradzadi.jpg",
+    bio: "Olivier is a dedicated coach with 20+ year experience in martial art including boxing, kick boxing and Muay thaï. He has trained with Champions in his home country of Paris France and worked with Professional fighters here in Portland by way of Grand Avenue boxing gym.\n\nOlivier's focus is mainly technique, such as footwork, punch mechanism and all the details that build strong fundamentals. Including Pad work, conditioning and sparring preparation.\n\nYouth & Adult all level",
+    imageSlot: "/images/coaches/olivier-gandzadi.jpg",
   },
 ];
