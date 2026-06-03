@@ -11,6 +11,7 @@ import { StatsBar } from "@/components/home/StatsBar";
 import { FirstVisit } from "@/components/home/FirstVisit";
 import { LocationBlock } from "@/components/home/LocationBlock";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { DonateBlock } from "@/components/home/DonateBlock";
 import { BUSINESS, SITE_URL } from "@/lib/config";
 import { JsonLd } from "@/components/shared/JsonLd";
 
@@ -41,6 +42,7 @@ export default function HomePage() {
       <main>
         <Hero />
         <MissionBlock />
+        <DonateBlock />
         <VideoReel />
         <ProgramsList />
         <CoachesPreview />
